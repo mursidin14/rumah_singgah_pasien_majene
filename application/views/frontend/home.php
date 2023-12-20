@@ -1,11 +1,31 @@
+ <style>
+	html {
+		scroll-behavior: smooth;
+	}
+ </style>
  <!-- Masthead-->
  <header class="masthead">
  	<div class="container">
  		<div class="masthead-subheading">Selamat Datang!</div>
  		<div class="masthead-heading text-uppercase">RSP Majene</div>
- 		<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="<?= base_url('profile')?>">Lihat Profil</a>
+ 		<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="<?= base_url('home/#profil')?>">Lihat Profil</a>
  	</div>
  </header>
+
+  <!-- profil-->
+  <br>
+ <section class="page-section" id="profil">
+ 	<div class="container">
+ 		<div class="text-center">
+ 			<h2 class="section-heading text-uppercase">Profil</h2>
+ 			<h3 class="section-subheading text-muted">Rumah Singgah Pasien, Kabupaten Majene</h3>
+ 		</div>
+ 		<div class="row text-justify pl-5 pr-5">
+ 			<p><?= $profil[0]['profile'] ?></p>
+ 		</div>
+ 	</div>
+ </section>
+ 
 
  <!-- kontak & peta -->
  <section style="position: fixed; bottom: 0; right: 0; padding: 50px 20px;">
@@ -105,7 +125,7 @@
  		</div>
 	</div> -->
 
-	<section class="page-section">
+	<section class="page-section" id="visi_misi">
 		<div class="container">
 			<div class="text-center">
 				<h2 class="section-heading text-uppercase">Visi & Misi</h2>
@@ -130,7 +150,7 @@
 	</section>
 
 
- 	<section class="page-section">
+ 	<section class="page-section" id="sejarah">
 		<div class="container">
 			<div class="text-center">
 				<h2 class="section-heading text-uppercase">Sejarah Rumah Singgah Pasien</h2>
@@ -144,7 +164,7 @@
 		</div>
 	</section>
 
-	<section class="page-section">
+	<section class="page-section" id="tujuan">
 		<div class="container">
 			<div class="text-center">
 				<h2 class="section-heading text-uppercase">Maksud dan Tujuan RSP</h2>
@@ -159,7 +179,7 @@
 		</div>
 	</section>
 
-	<section class="page-section">
+	<section class="page-section" id="tatib">
 		<div class="container">
 			<div class="text-center">
 				<h2 class="section-heading text-uppercase">Persyaratan dan Tata Tertib Pengguna RSP</h2>

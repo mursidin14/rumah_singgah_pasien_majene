@@ -35,7 +35,21 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav text-uppercase ml-auto">
-					<li class="nav-item"><a class="nav-link" href="<?= base_url('profile')?>">Profile</a></li>
+					<li class="nav-item">
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle nav-link" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+									Home
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenu1">
+								<li><a class="nav-link" href="<?= base_url('home/#profil')?>">Profil</a></li>
+								<li><a class="nav-link" href="<?= base_url('home/#visi_misi')?>">Visi & Misi</a></li>
+								<li><a class="nav-link" href="<?= base_url('home/#sejarah')?>">Sejarah</a></li>
+								<li><a class="nav-link" href="<?= base_url('home/#tujuan')?>">Tujuan</a></li>
+								<li><a class="nav-link" href="<?= base_url('home/#tatib')?>">Tata tertib</a></li>
+							</ul>
+						</div>
+					</li>
 					<li class="nav-item"><a class="nav-link" href="<?= base_url('suratonline')?>">Pendaftaran</a></li>
 					<li class="nav-item"><a class="nav-link" href="<?= base_url('fasilitas')?>">Fasilitas</a></li>
 					<li class="nav-item"><a class="nav-link" href="<?= base_url('peraturan')?>">Arsip</a></li>

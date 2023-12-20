@@ -21,7 +21,7 @@ class Home extends CI_Controller
         // $data = $this->dashboard->user();
         $data['profil'] = $this->galery->profil();
         $judul = [
-            'title' => 'Home - Rumah Singgah Pasien',
+            'title' => 'Home',
             'sub_title' => ''
         ];
 
