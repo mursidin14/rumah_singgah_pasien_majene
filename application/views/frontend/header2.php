@@ -46,8 +46,8 @@
 							</button>
 							<ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenu1">
 								<li><a class="nav-link" href="<?= base_url('home/#profil')?>">Profil</a></li>
-								<li><a class="nav-link" href="<?= base_url('home/#visi_misi')?>">Visi Misi</a></li>
 								<li><a class="nav-link" href="<?= base_url('home/#struktur')?>">Struktur Organisasi</a></li>
+								<li><a class="nav-link" href="<?= base_url('home/#visi_misi')?>">Visi Misi</a></li>
 								<li><a class="nav-link" href="<?= base_url('home/#tujuan')?>">Maksud dan Tujuan</a></li>
 								<li><a class="nav-link" href="<?= base_url('home/#tatib')?>">Persyaratan dan Tata Tertib</a></li>
 							</ul>
