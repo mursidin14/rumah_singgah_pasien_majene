@@ -41,24 +41,23 @@
 				<li class="nav-item">
 						<div class="dropdown">
 							<button class="btn btn-default dropdown-toggle nav-link" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-									Home
+									Profile
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenu1">
 								<li><a class="nav-link" href="<?= base_url('home/#profil')?>">Profil</a></li>
-								<li><a class="nav-link" href="<?= base_url('home/#visi_misi')?>">Visi & Misi</a></li>
-								<li><a class="nav-link" href="<?= base_url('home/#sejarah')?>">Sejarah</a></li>
-								<li><a class="nav-link" href="<?= base_url('home/#tujuan')?>">Tujuan</a></li>
-								<li><a class="nav-link" href="<?= base_url('home/#tatib')?>">Tata tertib</a></li>
+								<li><a class="nav-link" href="<?= base_url('home/#visi_misi')?>">Visi Misi</a></li>
+								<li><a class="nav-link" href="<?= base_url('home/#struktur')?>">Struktur Organisasi</a></li>
+								<li><a class="nav-link" href="<?= base_url('home/#tujuan')?>">Maksud dan Tujuan</a></li>
+								<li><a class="nav-link" href="<?= base_url('home/#tatib')?>">Persyaratan dan Tata Tertib</a></li>
 							</ul>
 						</div>
 					</li>
 					<li class="nav-item"><a class="nav-link <?php if ($title == 'Pendaftaran') : ?><?= 'active';?><?php endif;?>" href="<?= base_url('suratonline')?>">Pendaftaran</a></li>
-					<li class="nav-item"><a class="nav-link <?php if ($title == 'Fasilitas') : ?><?= 'active';?><?php endif;?>" href="<?= base_url('fasilitas')?>">Fasilitas</a></li>
+					<li class="nav-item"><a class="nav-link <?php if ($title == 'Fasilitas') : ?><?= 'active';?><?php endif;?>" href="<?= base_url('fasilitas')?>">Kamar & Fasilitas</a></li>
 					<li class="nav-item"><a class="nav-link <?php if ($title == 'Arsip') : ?><?= 'active';?><?php endif;?>" href="<?= base_url('peraturan')?>">Arsip</a></li>
 					<li class="nav-item"><a class="nav-link <?php if ($title == 'Tracking') : ?><?= 'active';?><?php endif;?>" href="<?= base_url('tracking')?>">Track Pengajuan</a></li>
-					<li class="nav-item"><a class="nav-link" target="_blank"
-							href="<?= base_url('auth/login')?>">Login</a></li>
+					<li class="nav-item"><a class="nav-link" target="_blank" href="<?= base_url('auth/login')?>">Login</a></li>
 				</ul>
 			</div>
 		</div>

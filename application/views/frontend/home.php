@@ -40,7 +40,7 @@
  </section>
 
  <!-- struktur -->
- <!-- <section class="page-section bg-light" id="struktur">
+ <section class="page-section bg-light" id="struktur">
  	<div class="container">
  		<div class="text-center">
  			<h2 class="section-heading text-uppercase">Struktur Organisasi</h2>
@@ -62,7 +62,7 @@
  					</div>
  				</div>
  			</div>
- 			<div class="col-lg-4 col-sm-6 mb-4">
+ 			<!-- <div class="col-lg-4 col-sm-6 mb-4">
  				<div class="portfolio-item">
  					<a class="portfolio-link" data-toggle="modal" href="#slpm">
  						<div class="portfolio-hover">
@@ -76,8 +76,8 @@
  						<div class="portfolio-caption-subheading text-muted">Klik + lihat detail</div>
  					</div>
  				</div>
- 			</div>
- 			<div class="col-lg-4 col-sm-6 mb-4">
+ 			</div> -->
+ 			<!-- <div class="col-lg-4 col-sm-6 mb-4">
  				<div class="portfolio-item">
  					<a class="portfolio-link" data-toggle="modal" href="#slinmas">
  						<div class="portfolio-hover">
@@ -91,8 +91,8 @@
  						<div class="portfolio-caption-subheading text-muted">Klik + lihat detail</div>
  					</div>
  				</div>
- 			</div>
- 			<div class="col-lg-4 col-sm-6 mb-4">
+ 			</div> -->
+ 			<!-- <div class="col-lg-4 col-sm-6 mb-4">
  				<div class="portfolio-item">
  					<a class="portfolio-link" data-toggle="modal" href="#spemuda">
  						<div class="portfolio-hover">
@@ -106,8 +106,8 @@
  						<div class="portfolio-caption-subheading text-muted">Klik + lihat detail</div>
  					</div>
  				</div>
- 			</div>
- 			<div class="col-lg-4 col-sm-6 mb-4">
+ 			</div> -->
+ 			<!-- <div class="col-lg-4 col-sm-6 mb-4">
  				<div class="portfolio-item">
  					<a class="portfolio-link" data-toggle="modal" href="#rtrw">
  						<div class="portfolio-hover">
@@ -122,8 +122,10 @@
  					</div>
  				</div>
 			 </div>
+			</div> -->
  		</div>
-	</div> -->
+	</div>
+</section>
 
 	<section class="page-section" id="visi_misi">
 		<div class="container">
@@ -150,7 +152,7 @@
 	</section>
 
 
- 	<section class="page-section" id="sejarah">
+ 	<!-- <section class="page-section" id="sejarah">
 		<div class="container">
 			<div class="text-center">
 				<h2 class="section-heading text-uppercase">Sejarah Rumah Singgah Pasien</h2>
@@ -162,7 +164,7 @@
 				</p>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<section class="page-section" id="tujuan">
 		<div class="container">

@@ -72,7 +72,7 @@
   <!-- kontak & peta -->
   <section style="position: fixed; bottom: 0; right: 0; padding: 50px 20px;">
 	<a href="https://wa.me/6281952215980" target="_blank">
-		<img width="50px" height="50px" src="<?= base_url()?>assets/img/whatsapp.png" alt="whatsapp">
+		<img width="50px" height="50px" src="<?= base_url()?>assets/img/cs.png" alt="whatsapp">
 	</a>
 	<p>
 		<a href="https://maps.app.goo.gl/LvgAEma9KXFSmam69" target="_blank">
