@@ -30,8 +30,8 @@
                             <div class="col-lg-12">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Struktur Kelurahan</h2>
-                                    <p class="item-intro text-muted">|</p>
+                                    <h2 class="text-uppercase">Struktur Organisasi</h2>
+                                    <p class="item-intro text-muted"></p>
                                     <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/galery/'); echo $profil[0]['s_kelurahan']?>" alt="struktur-kelurahan" />
                                     <!-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
@@ -61,8 +61,8 @@
                             <div class="col-lg-12">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Struktur LPM</h2>
-                                    <p class="item-intro text-muted">|</p>
+                                    <h2 class="text-uppercase">Alur Pelayanan RSP Majene</h2>
+                                    <p class="item-intro text-muted"></p>
                                     <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/galery/'); echo $profil[0]['s_lpm']?>" alt="struktur-lpm" />
                                     <!-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">

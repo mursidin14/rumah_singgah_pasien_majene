@@ -31,32 +31,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href=" ../dashboard.html ">Sistem Layanan Rumah Singgah Pasien Kab.Majene</a>
+                <a class="navbar-brand" href="<?php echo base_url('dashboard') ?>">Sistem Layanan Rumah Singgah Pasien Kab.Majene</a>
             </div>
-            <!-- <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="../dashboard.html">
+                        <a href="<?php echo base_url('dashboard') ?>">
                             <i class="material-icons">dashboard</i> Dashboard
                         </a>
                     </li>
                     <li class="">
-                        <a href="register.html">
-                            <i class="material-icons">person_add</i> Register
-                        </a>
-                    </li>
-                    <li class=" active ">
-                        <a href="login.html">
-                            <i class="material-icons">fingerprint</i> Login
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="lock.html">
-                            <i class="material-icons">lock_open</i> Lock
+                        <a href="<?php echo base_url('home') ?>">
+                            <i class="material-icons">home</i> Home
                         </a>
                     </li>
                 </ul>
-            </div> -->
+            </div>
         </div>
     </nav>
     <div class="wrapper wrapper-full-page">
@@ -97,15 +87,6 @@
                                     <?php endif ?>
 
 
-                                    <!-- <div class="alert alert-info alert-with-icon" data-notify="container">
-                                        <i class="material-icons" data-notify="icon">notifications</i>
-                                        <button type="button" aria-hidden="true" class="close">
-                                            <i class="material-icons">close</i>
-                                        </button>
-                                        <span data-notify="message">tyle.</span>
-                                    </div> -->
-
-
 
                                     <div class="card-content">
 
@@ -118,16 +99,7 @@
                                                 <label class="control-label">Username</label>
                                                 <input type="text" class="form-control" id="username" name="username">
                                             </div>
-                                        </div>
-                                        <!-- <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="material-icons">email</i>
-                                            </span>
-                                            <div class="form-group label-floating">
-                                                <label class="control-label">Email address</label>
-                                                <input type="email" class="form-control">
-                                            </div>
-                                        </div> -->
+                                        </div>          
                                         <div class="input-group">
                                             <span class="input-group-addon">
                                                 <i class="material-icons">lock_outline</i>
@@ -147,41 +119,6 @@
                     </div>
                 </div>
             </div>
-            <footer class="footer">
-                <div class="container">
-                    <!-- <nav class="pull-left">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Company
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Portfolio
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Blog
-                                </a>
-                            </li>
-                        </ul>
-                    </nav> -->
-                    <p class="copyright pull-right">
-                        &copy;
-                        <script>
-                            document.write(new Date().getFullYear())
-                        </script>
-                        <a href="#">Anonymous</a>, Copyright
-                    </p>
-                </div>
-            </footer>
         </div>
     </div>
 </body>

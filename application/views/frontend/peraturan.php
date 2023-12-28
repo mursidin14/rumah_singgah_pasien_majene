@@ -11,9 +11,9 @@
 			<div class="row justify-content-center">
 				<div class="col-12 col-md-10 col-lg-8">
 					<section class="page-section">
-						<h3>Download Peraturan</h3>
+						<h3>Download</h3>
 						<a style="text-decoration: none; margin: auto;" href="<?php echo base_url('uploads/PERBUP.pdf'); ?>" download>
-							<i class="fas fa-download download-icon fa-2x"></i> Download Surat
+							<i class="fas fa-download download-icon fa-2x"></i>&nbsp; PERBUP No. 13 Tahun 2022 Tentang Rumah Singgah Pasien
 						</a>
 					</section>
                     <h3>Arsip</h3>
@@ -85,7 +85,7 @@
 	</a>
 	<p>
 		<a href="https://maps.app.goo.gl/LvgAEma9KXFSmam69" target="_blank">
-			<img width="50px" height="50px" src="<?= base_url()?>assets/img/maps.png" alt="maps">
+			<img style="margin-top: 15px;" width="50px" height="50px" src="<?= base_url()?>assets/img/_maps.png" alt="maps">
 		</a>
 	</p>
  </section>

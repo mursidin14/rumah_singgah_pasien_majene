@@ -9,7 +9,7 @@
 				<?php endif; ?>
 				<div class="card">
 					<div class="card-header card-header-icon" data-background-color="orange">
-						<i class="material-icons">mail</i>
+						<i class="material-icons">wysiwyg</i>
 					</div>
 					<div class="card-content">
 						<h4 class="card-title">Pengajuan Rumah Singgah Pasien</h4>

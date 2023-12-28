@@ -63,7 +63,7 @@ class Galery extends CI_Controller
         $data['profil'] = $this->galery->profil();
         $judul = [
             'title' => 'Galery',
-            'sub_title' => 'Struktur Kelurahan'
+            'sub_title' => 'Struktur Organisasi'
         ];
 
         // $data['sm'] = $this->db->get('surat_masuk')->row_array();
@@ -75,13 +75,13 @@ class Galery extends CI_Controller
 
     public function edit_s_kelurahan()
     {
-        $this->form_validation->set_rules('s_kelurahan', 'Struktur Kelurahan', 'trim');
+        $this->form_validation->set_rules('s_kelurahan', 'Struktur Organisasi', 'trim');
 
         if ($this->form_validation->run() == false) {
             $data['profil'] = $this->galery->profil();
             $judul = [
                 'title' => 'Galery',
-                'sub_title' => 'Struktur Kelurahan'
+                'sub_title' => 'Struktur Organisasi'
             ];
 
             // $data['sm'] = $this->db->get('surat_masuk')->row_array();
@@ -131,7 +131,7 @@ class Galery extends CI_Controller
         $data['profil'] = $this->galery->profil();
         $judul = [
             'title' => 'Galery',
-            'sub_title' => 'Struktur LPM'
+            'sub_title' => 'Alur Pelayanan'
         ];
 
         // $data['sm'] = $this->db->get('surat_masuk')->row_array();
@@ -143,13 +143,13 @@ class Galery extends CI_Controller
 
     public function edit_s_lpm()
     {
-        $this->form_validation->set_rules('s_lpm', 'Struktur LPM', 'trim');
+        $this->form_validation->set_rules('s_lpm', 'Alur Pelayanan RSP Majene', 'trim');
 
         if ($this->form_validation->run() == false) {
             $data['profil'] = $this->galery->profil();
             $judul = [
                 'title' => 'Galery',
-                'sub_title' => 'Struktur LPM'
+                'sub_title' => 'Alur Pelayanan RSP Majene'
             ];
 
             // $data['sm'] = $this->db->get('surat_masuk')->row_array();

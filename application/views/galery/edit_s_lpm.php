@@ -12,12 +12,12 @@
 						<i class="material-icons">people</i>
 					</div>
 					<div class="card-content">
-						<h4 class="card-title">Edit Struktur LPM</h4>
+						<h4 class="card-title">Edit Alur Pelayanan RSP Majene</h4>
 						<image class="img-fluid" src="<?= base_url('/assets/galery/');  echo $profil[0]['s_lpm'] ?>" alt="struktur-LPM"></image>
 						<hr />
 						<form  enctype="multipart/form-data" action="<?= base_url('galery/edit_s_lpm/')?><?= $profil[0]['id']?>" method="post">
                         
-							<label for="s_lpm">Ganti Struktur LPM</label>
+							<label for="s_lpm">Ganti Alur Pelayanan RSP Majene</label>
 							<input type="file" accept="image/*" name="s_lpm" id="s_lpm">
 							<input type="hidden" name="s_lpm_old" value="<?= $profil[0]['s_lpm'] ?>" id="s_lpm">
 							<button class="btn btn-primary pull-right" type="submit">Update</button>

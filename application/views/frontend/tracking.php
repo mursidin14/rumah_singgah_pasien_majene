@@ -6,7 +6,7 @@
 		<?php endif; ?>
 		<div class="text-center">
 			<h2 class="section-heading text-uppercase">Tracking Pengajuan Rumah Singgah</h2>
-			<h3 class="section-subheading text-muted">Masukkan ID Pengajuan untuk <b>Track</b>:</h3>
+			<h3 class="section-subheading text-muted">Masukkan NIK Pengajuan untuk <b>Track</b>:</h3>
 		</div>
 		<div class="text-justify pl-5 pr-5">
 			<div class="row justify-content-center">
@@ -19,7 +19,7 @@
 						<!--end of col-->
 						<div class="col">
 							<input class="form-control form-control-lg form-control-borderless" type="search"
-								name="trackid" placeholder="Masukkan ID Pengajuan Anda">
+								name="trackid" placeholder="Masukkan NIK Pengajuan Anda">
 						</div>
 						<!--end of col-->
 						<div class="col-auto">
@@ -42,7 +42,7 @@
 	</a>
 	<p>
 		<a href="https://maps.app.goo.gl/LvgAEma9KXFSmam69" target="_blank">
-			<img width="50px" height="50px" src="<?= base_url()?>assets/img/maps.png" alt="maps">
+			<img style="margin-top: 15px;" width="50px" height="50px" src="<?= base_url()?>assets/img/_maps.png" alt="maps">
 		</a>
 	</p>
  </section>

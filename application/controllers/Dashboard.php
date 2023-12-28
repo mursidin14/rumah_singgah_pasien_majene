@@ -20,20 +20,6 @@ class Dashboard extends CI_Controller
             'sub_title' => ''
         ];
 
-        // $data['sm'] = $this->db->get('surat_masuk')->row_array();
-        $januari = $this->db->query('SELECT * FROM surat_masuk WHERE month(tanggal_surat_masuk)="1"')->num_rows();
-        $februari = $this->db->query('SELECT * FROM surat_masuk WHERE month(tanggal_surat_masuk)="2"')->num_rows();
-        $maret = $this->db->query('SELECT * FROM surat_masuk WHERE month(tanggal_surat_masuk)="3"')->num_rows();
-        $april = $this->db->query('SELECT * FROM surat_masuk WHERE month(tanggal_surat_masuk)="4"')->num_rows();
-        $mei = $this->db->query('SELECT * FROM surat_masuk WHERE month(tanggal_surat_masuk)="5"')->num_rows();
-        $juni = $this->db->query('SELECT * FROM surat_masuk WHERE month(tanggal_surat_masuk)="6"')->num_rows();
-        $juli = $this->db->query('SELECT * FROM surat_masuk WHERE month(tanggal_surat_masuk)="7"')->num_rows();
-        $agustus = $this->db->query('SELECT * FROM surat_masuk WHERE month(tanggal_surat_masuk)="8"')->num_rows();
-        $september = $this->db->query('SELECT * FROM surat_masuk WHERE month(tanggal_surat_masuk)="9"')->num_rows();
-        $oktober = $this->db->query('SELECT * FROM surat_masuk WHERE month(tanggal_surat_masuk)="10"')->num_rows();
-        $november = $this->db->query('SELECT * FROM surat_masuk WHERE month(tanggal_surat_masuk)="11"')->num_rows();
-        $desember = $this->db->query('SELECT * FROM surat_masuk WHERE month(tanggal_surat_masuk)="12"')->num_rows();
-
 
         $januari1 = $this->db->query('SELECT * FROM surat_keluar WHERE month(tanggal_surat_keluar)="1"')->num_rows();
         $februari1 = $this->db->query('SELECT * FROM surat_keluar WHERE month(tanggal_surat_keluar)="2"')->num_rows();
@@ -62,8 +48,6 @@ class Dashboard extends CI_Controller
         $november2 = $this->db->query('SELECT * FROM surat_keterangan WHERE month(tanggal_surat_keterangan)="2"')->num_rows();
         $desember2 = $this->db->query('SELECT * FROM surat_keterangan WHERE month(tanggal_surat_keterangan)="22"')->num_rows();
 
-        $data['masuk'] = [$januari, $februari, $maret, $april, $mei, $juni, $juli, $agustus, $september, $oktober, $november, $desember];
-
         $data['keluar'] = [$januari1, $februari1, $maret1, $april1, $mei1, $juni1, $juli1, $agustus1, $september1, $oktober1, $november1, $desember1];
 
         $data['keterangan'] = [$januari2, $februari2, $maret2, $april2, $mei2, $juni2, $juli2, $agustus2, $september2, $oktober2, $november2, $desember2];
@@ -75,15 +59,11 @@ class Dashboard extends CI_Controller
         // var_dump($data);
 
 
-        $data2['sm'] = $this->db->query('SELECT tanggal_surat_masuk FROM surat_masuk ORDER BY tanggal_surat_masuk DESC LIMIT 1')->result_array();
 
         $data2['sk'] = $this->db->query('SELECT tanggal_surat_keluar FROM surat_keluar ORDER BY tanggal_surat_keluar DESC LIMIT 1')->result_array();
 
         $data2['sket'] = $this->db->query('SELECT tanggal_surat_keterangan FROM surat_keterangan ORDER BY tanggal_surat_keterangan DESC LIMIT 1')->result_array();
 
-        if ($data2['sm'] == null) {
-            $data2['sm'] = 0;
-        }
         if($data2['sk'] == null){
             $data2['sk'] = 0;
         }

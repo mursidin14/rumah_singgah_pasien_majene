@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Fasilitas extends CI_Controller
+class Kamar extends CI_Controller
 {
 
     public function __construct()
@@ -20,14 +20,14 @@ class Fasilitas extends CI_Controller
         // $data = $this->dashboard->user();
         $data['profil'] = $this->galery->profil();
         $judul = [
-            'title' => 'Fasilitas',
+            'title' => 'Kamar',
             'sub_title' => ''
         ];
 
-        $data['sm'] = $this->db->get('fasilitas')->result_array();
+        $data['sm'] = $this->db->get('iventaris')->result_array();
         // var_dump($data);
         $this->load->view('frontend/header2', $judul);
-        $this->load->view('frontend/fasilitas', $data);
+        $this->load->view('frontend/kamar', $data);
         $this->load->view('frontend/footer2', $data);
     }
 

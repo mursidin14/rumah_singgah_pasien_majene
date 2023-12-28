@@ -12,7 +12,7 @@
 						<i class="material-icons">people</i>
 					</div>
 					<div class="card-content">
-						<h4 class="card-title">Struktur Kelurahan</h4>
+						<h4 class="card-title">Struktur Organisasi</h4>
 						<image class="img-fluid" src="<?= base_url('/assets/galery/'); echo $profil[0]['s_kelurahan'] ?>" alt="struktur-kelurahan"></image>
 						<a href="<?= base_url('galery/edit_s_kelurahan/')?><?= $profil[0]['id']?>"
 							class="btn btn-finish pull-right">Edit</a>

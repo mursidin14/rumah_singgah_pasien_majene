@@ -57,7 +57,7 @@
 	</a>
 	<p>
 		<a href="https://maps.app.goo.gl/LvgAEma9KXFSmam69" target="_blank">
-			<img width="50px" height="50px" src="<?= base_url()?>assets/img/maps.png" alt="maps">
+			<img style="margin-top: 15px;" width="50px" height="50px" src="<?= base_url()?>assets/img/_maps.png" alt="maps">
 		</a>
 	</p>
  </section>

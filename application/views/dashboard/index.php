@@ -8,7 +8,7 @@
                     </div>
                     <div class="card-content">
                         <p class="category">Inventaris</p>
-                        <h3 class="card-title"><?= $this->db->get('surat_masuk')->num_rows(); ?></h3>
+                        <h3 class="card-title"><?= $this->db->get('iventaris')->num_rows(); ?></h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">

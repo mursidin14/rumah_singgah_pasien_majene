@@ -25,7 +25,7 @@ class Suratonline extends CI_Controller
         ];
 
         $data['options'] = [
-            'Pilih Kode Kamar',
+            'Pilih Kamar',
             'RSP-K1' => 'Kamar 1',
             'RSP-K2' => 'Kamar 2',
             'RSP-K3' => 'Kamar 3',
@@ -34,7 +34,7 @@ class Suratonline extends CI_Controller
             'RSP-K6' => 'Kamar 6',
         ];
 
-        $data['sm'] = $this->db->get('surat_masuk')->result_array();
+        $data['sm'] = $this->db->get('iventaris')->result_array();
         // var_dump($data);
         $this->load->view('frontend/header2', $judul);
         $this->load->view('frontend/s_online', $data);
@@ -84,7 +84,8 @@ class Suratonline extends CI_Controller
         $mnth = date("m");
         $s = date('s');
         $randomize = $d + $y + $mnth + $s;
-        $id = $id . $rid3 . $randomize . $count . $y;
+        // $id = $id . $rid3 . $randomize . $count . $y;
+        $id = $nik;
 
         // var_dump($id);
         // die;
@@ -150,7 +151,7 @@ class Suratonline extends CI_Controller
         // die;
 
         $this->pengajuan_track->insert_p_surat($data);
-        $this->session->set_flashdata('success', '<div class="alert alert-success alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h5><i class="icon fas fa-check"></i> Selamat!</h5> Berhasil Mengajukan Surat! Berikut <b>ID</b> anda: <b>' . $id . '</b></div>');
+        $this->session->set_flashdata('success', '<div class="alert alert-success alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h5><i class="icon fas fa-check"></i> Selamat!</h5> Berhasil Mengajukan Surat! Berikut <b>NIK</b> anda: <b>' . $id . '</b></div>');
         redirect(base_url("suratonline"));
     }
 }

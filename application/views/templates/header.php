@@ -55,24 +55,12 @@
 							<div class="clearfix"></div>
 							<div class="collapse" id="collapseExample">
 								<ul class="nav">
-									<!-- <li>
-                                        <a href="#">
-                                            <span class="sidebar-mini">MP</span>
-                                            <span class="sidebar-normal">My Profile</span>
-                                        </a>
-                                    </li> -->
 									<li>
 										<a href="<?= base_url() ?>user/edit/<?= $this->session->userdata('id_user'); ?>">
 											<span class="sidebar-mini">EP</span>
 											<span class="sidebar-normal">Edit Profile</span>
 										</a>
 									</li>
-									<!-- <li>
-                                        <a href="#">
-                                            <span class="sidebar-mini">S</span>
-                                            <span class="sidebar-normal">Settings</span>
-                                        </a>
-                                    </li> -->
 								</ul>
 							</div>
 						</div>
@@ -97,7 +85,7 @@
 						<?php endif; ?>
 						">
 						<a data-toggle="collapse" href="#pagesExamples">
-							<i class="material-icons">email</i>
+						<i class="material-icons">wysiwyg</i>
 							<p>Manajemen RSP
 								<b class="caret"></b>
 							</p>
@@ -125,32 +113,21 @@
                                     <?= 'active'; ?>
                                 <?php endif; ?>
                                 ">
-									<a href="<?= base_url() ?>surat/surat_masuk">
+									<a href="<?= base_url() ?>iventaris/index">
 										<span class="sidebar-mini">I</span>
 										<span class="sidebar-normal">Inventaris</span>
 									</a>
 								</li>
-								<!-- <li class="
-                                <?php if ($sub_title == 'Surat Keluar') : ?>
+								<li class="
+                                <?php if ($sub_title == 'Fasilitas') : ?>
                                     <?= 'active'; ?>
                                 <?php endif; ?>
                                 ">
-									<a href="<?= base_url() ?>surat/surat_keluar">
-										<span class="sidebar-mini">K</span>
-										<span class="sidebar-normal">Surat Keluar</span>
+									<a href="<?= base_url() ?>Afasilitas/index">
+										<span class="sidebar-mini">F</span>
+										<span class="sidebar-normal">Fasilitas</span>
 									</a>
 								</li>
-								<li class="
-                                <?php if ($sub_title == 'Surat Keterangan') : ?>
-                                    <?= 'active'; ?>
-                                <?php endif; ?>
-                                ">
-									<a href="<?= base_url() ?>surat/surat_keterangan">
-										<span class="sidebar-mini">SK</span>
-										<span class="sidebar-normal">Surat Keterangan</span>
-									</a>
-								</li> -->
-
 							</ul>
 						</div>
 					</li>
@@ -174,7 +151,7 @@
                         <?php endif; ?>
                         " id="formsExamples">
 							<ul class="nav">
-								<li class="
+								<!-- <li class="
                                 <?php if ($sub_title == 'Profil Kelurahan') : ?>
                                     <?= 'active'; ?>
                                 <?php endif; ?>
@@ -183,28 +160,28 @@
 										<span class="sidebar-mini">RF</span>
 										<span class="sidebar-normal">Profil Kelurahan</span>
 									</a>
-								</li>
+								</li> -->
 								<li class="
-                                <?php if ($sub_title == 'Struktur Kelurahan') : ?>
+                                <?php if ($sub_title == 'Struktur Organisasi') : ?>
                                     <?= 'active'; ?>
                                 <?php endif; ?>
                                 ">
 									<a href="<?= base_url() ?>galery/s_kelurahan">
-										<span class="sidebar-mini">EF</span>
-										<span class="sidebar-normal">Struktur Kelurahan</span>
+										<span class="sidebar-mini">SO</span>
+										<span class="sidebar-normal">Struktur Organisasi</span>
 									</a>
 								</li>
 								<li class="
-                                <?php if ($sub_title == 'Struktur LPM') : ?>
+                                <?php if ($sub_title == 'Alur Pelayanan') : ?>
                                     <?= 'active'; ?>
                                 <?php endif; ?>
                                 ">
 									<a href="<?= base_url() ?>galery/s_lpm">
-										<span class="sidebar-mini">VF</span>
-										<span class="sidebar-normal">Struktur LPM</span>
+										<span class="sidebar-mini">AP</span>
+										<span class="sidebar-normal">Alur Pelayanan</span>
 									</a>
 								</li>
-								<li class="
+								<!-- <li class="
                                 <?php if ($sub_title == 'Struktur Linmas') : ?>
                                     <?= 'active'; ?>
                                 <?php endif; ?>
@@ -213,8 +190,8 @@
 										<span class="sidebar-mini">W</span>
 										<span class="sidebar-normal">Struktur Linmas</span>
 									</a>
-								</li>
-								<li class="
+								</li> -->
+								<!-- <li class="
                                 <?php if ($sub_title == 'Struktur Pemuda Kelurahan') : ?>
                                     <?= 'active'; ?>
                                 <?php endif; ?>
@@ -223,8 +200,8 @@
 										<span class="sidebar-mini">W</span>
 										<span class="sidebar-normal">Pemuda Kelurahan</span>
 									</a>
-								</li>
-								<li class="
+								</li> -->
+								<!-- <li class="
                                 <?php if ($sub_title == 'Ketua RT & RW') : ?>
                                     <?= 'active'; ?>
                                 <?php endif; ?>
@@ -233,7 +210,7 @@
 										<span class="sidebar-mini">W</span>
 										<span class="sidebar-normal">Ketua RT & RW</span>
 									</a>
-								</li>
+								</li> -->
 							</ul>
 						</div>
 					</li>
