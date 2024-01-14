@@ -166,7 +166,7 @@
                                     <?= 'active'; ?>
                                 <?php endif; ?>
                                 ">
-									<a href="<?= base_url() ?>galery/s_kelurahan">
+									<a href="<?= base_url() ?>galery/s_organisasi">
 										<span class="sidebar-mini">SO</span>
 										<span class="sidebar-normal">Struktur Organisasi</span>
 									</a>

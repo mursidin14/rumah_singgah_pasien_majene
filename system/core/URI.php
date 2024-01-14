@@ -48,7 +48,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author		EllisLab Dev Team
  * @link		https://codeigniter.com/user_guide/libraries/uri.html
  */
-class CI_URI {
+#[\AllowDynamicProperties]
+ class CI_URI {
 
 	/**
 	 * List of cached URI segments
@@ -98,7 +99,7 @@ class CI_URI {
 	 */
 	public function __construct()
 	{
-		$this->config =& load_class('Config', 'core');
+		$this->config = load_class('Config', 'core');
 
 		// If query strings are enabled, we don't need to parse any segments.
 		// However, they don't make sense under CLI.

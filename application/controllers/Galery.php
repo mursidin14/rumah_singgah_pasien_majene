@@ -58,7 +58,7 @@ class Galery extends CI_Controller
         }
     }
 
-    public function s_kelurahan()
+    public function s_organisasi()
     {
         $data['profil'] = $this->galery->profil();
         $judul = [
@@ -69,11 +69,11 @@ class Galery extends CI_Controller
         // $data['sm'] = $this->db->get('surat_masuk')->row_array();
         // var_dump($data);
         $this->load->view('templates/header', $judul);
-        $this->load->view('galery/s_kelurahan',$data);
+        $this->load->view('galery/s_organisasi',$data);
         $this->load->view('templates/footer');
     }
 
-    public function edit_s_kelurahan()
+    public function edit_s_organisasi()
     {
         $this->form_validation->set_rules('s_kelurahan', 'Struktur Organisasi', 'trim');
 
@@ -87,7 +87,7 @@ class Galery extends CI_Controller
             // $data['sm'] = $this->db->get('surat_masuk')->row_array();
             // var_dump($data);
             $this->load->view('templates/header', $judul);
-            $this->load->view('galery/edit_s_kelurahan',$data);
+            $this->load->view('galery/edit_s_organisasi',$data);
             $this->load->view('templates/footer');
         }else{
             $id = $this->uri->segment(3);
@@ -121,7 +121,7 @@ class Galery extends CI_Controller
             
             $this->galery->UpdateSKelurahan($s_kelurahan,$id);
             $this->session->set_flashdata('success', 'Berhasil Di Update!');
-            redirect('galery/s_kelurahan');
+            redirect('galery/s_organisasi');
         }
         
     }
