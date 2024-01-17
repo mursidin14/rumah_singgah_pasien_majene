@@ -15,14 +15,8 @@
 					</div>
 					<div>
 								<?php if ($row['status'] == '1') : ?>
-									<h1>Mengajukan...</h1>
-								<?php elseif ($row['status'] == '2') : ?>
-									<h1>MAAF PENGAJUAN ANDA DITOLAK KARENA SYARAT TIDAK TERPENUHI</h1>
-								<?php elseif ($row['status'] == '3') : ?>
-									<h1>Verifikasi Berkas / Persyaratan<br>Diproses...</h1>
-								<?php elseif ($row['status'] == '4') : ?>
-									<h1><br>Diterima</h1>
-
+									<h1>Diterima</h1>
+									
 									<table class="table">
 										<thead>
 											<th>ID</th>
@@ -42,6 +36,8 @@
 											</tr>
 										</tbody>
 									</table>
+								<?php elseif ($row['status'] == '2') : ?>
+									<h1>MAAF PENGAJUAN ANDA DITOLAK KARENA SYARAT TIDAK TERPENUHI</h1>
 								<?php endif; ?>
 					</div>
 				</div>

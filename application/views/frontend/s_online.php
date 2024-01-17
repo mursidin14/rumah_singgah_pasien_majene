@@ -33,15 +33,19 @@
                 </div>
                 <div class="col-lg-6 mt-2">
                     <label for="jenis">Pilih Kamar *</label>
-                    <?= form_dropdown('jenis_surat', $options, '', ['id' => 'jenis', 'class' => 'form-control']); ?> 
+                    <?= form_dropdown('jenis_surat', $kamar, '', ['id' => 'jenis', 'class' => 'form-control']); ?> 
                 </div>
                 <div class="col-lg-12 mt-2">
-                    <label for="file">File Berkas/Lampiran <sup class="text-danger">*PDF Recommended! | Max 5MB</sup></label>
+                    <label for="file">File KTP <sup class="text-danger">*Max 5MB</sup></label>
                     <?= form_upload(['name' => 'file', 'id' => 'file', 'class' => 'form-control']) ?>
                 </div>
                 <div class="col-lg-12 mt-2">
-                    <label for="file">surat rujukan <sup class="text-danger">*PDF Recommended! | Max 5MB</sup></label>
+                    <label for="file">Surat Rujukan <sup class="text-danger">*Max 5MB</sup></label>
                     <?= form_upload(['name' => 'surat_rujukan', 'id' => 'file', 'class' => 'form-control']) ?>
+                </div>
+                <div class="col-lg-12 mt-2">
+                    <label for="file">Surat Rekomendasi Dinsos<sup class="text-danger">*Max 5MB</sup></label>
+                    <?= form_upload(['name' => 'surat_dinsos', 'id' => 'file', 'class' => 'form-control']) ?>
                 </div>
             </div>
             <hr>
@@ -73,3 +77,23 @@
 		</a>
 	</p>
  </section>
+
+ <script>
+     document.addEventListener('DOMContentLoaded', function () {
+        var select = document.getElementById('jenis');
+
+        select.addEventListener('change', function () {
+            var selectedOption = select.options[select.selectedIndex];
+            var kamarStatus = <?= json_encode($status); ?>;
+            var isStatusFilled = kamarStatus[selectedOption.value] === '2'; // 2 represents 'kamar terisi'
+
+            selectedOption.disabled = isStatusFilled;
+
+            if (isStatusFilled) {
+                alert('Pengajuan ditolak karena kamar terisi.');
+                // atau Anda bisa menggunakan cara lain untuk menampilkan pesan kepada pengguna
+                // misalnya, menambahkan elemen HTML yang menampilkan pesan di dalam halaman
+            }
+        });
+    });
+</script>

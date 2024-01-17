@@ -87,10 +87,10 @@
 												<h5>Update Status Kamar: <?= $key['kamar'] ?>? </h5>
 												<label for="status">Pilih Status</label>
 												<div class="radio">
-													<label>
+													<label style="color: black;">
 														<input type="radio" name="status" value="1" <?= $key['status'] == '1' ? 'checked="true"' : '' ?>><span class="circle"></span><span class="check"></span> <?= $status['1'] ?>
 													</label>
-													<label>
+													<label style="color: black;">
 														<input type="radio" name="status" value="2" <?= $key['status'] == '2' ? 'checked="true"' : '' ?>><span class="circle"></span><span class="check"></span> <?= $status['2'] ?>
 													</label>
 												</div>

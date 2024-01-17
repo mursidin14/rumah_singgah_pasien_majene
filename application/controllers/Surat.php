@@ -295,10 +295,8 @@ class Surat extends CI_Controller
         ];
 
         $data['status'] = [
-            1 => 'Mengajukan',
-            2 => 'Syarat Tidak Terpenuhi',
-            3 => 'Diproses',
-            4 => 'Diterima',
+            1 => 'Diterima',
+            2 => 'Ditolak',
         ];
 
         $data['options'] = [

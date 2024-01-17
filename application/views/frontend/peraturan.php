@@ -16,7 +16,7 @@
 							<i class="fas fa-download download-icon fa-2x"></i>&nbsp; PERBUP No. 13 Tahun 2022 Tentang Rumah Singgah Pasien
 						</a>
 					</section>
-                    <h3>Arsip</h3>
+                    <h3>Laporan Pengguna RSP</h3>
 					<div class="row">
 						<div class="col-md-6 col-sm-12">
 							<!-- Form untuk filter berdasarkan bulan -->

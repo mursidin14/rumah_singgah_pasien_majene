@@ -24,6 +24,7 @@
 										<th>Nama Pengaju (NIK)</th>
 										<th>File</th>
 										<th>Surat Rujukan</th>
+										<th>Surat Dinsos</th>
 										<th>Status Pengajuan</th>
 										<th class="disabled-sorting text-right">Actions</th>
 										<th>No Hp</th>
@@ -43,12 +44,13 @@
 											<td><?= $key['id']; ?></td>
 											<td><?= $key['nama'] . ' (' . $key['nik'] . ')'; ?></td>
 											<td>
-
 												<button class="btn btn-simple btn-info" data-toggle="modal" data-target="#lihatfile<?= $key['id']; ?>"><i class="material-icons">remove_red_eye</i></button>
 											</td>
 											<td>
-
 												<button class="btn btn-simple btn-info" data-toggle="modal" data-target="#surat_rujukan<?= $key['id']; ?>"><i class="material-icons">remove_red_eye</i></button>
+											</td>
+											<td>
+												<button class="btn btn-simple btn-info" data-toggle="modal" data-target="#surat_dinsos<?= $key['id']; ?>"><i class="material-icons">remove_red_eye</i></button>
 											</td>
 											<td><?= $status[$key['status']]; ?></td>
 											<td class="text-right">
@@ -84,17 +86,11 @@
 												<h5>Update Status Pengajuan ID: <?= $key['id'] ?>? </h5>
 												<label for="status">Pilih Status</label>
 												<div class="radio">
-													<label>
+													<label style="color: black;">
 														<input type="radio" name="status" value="1" <?= $key['status'] == '1' ? 'checked="true"' : '' ?>><span class="circle"></span><span class="check"></span> <?= $status['1'] ?>
 													</label>
-													<label>
+													<label style="color: black;">
 														<input type="radio" name="status" value="2" <?= $key['status'] == '2' ? 'checked="true"' : '' ?>><span class="circle"></span><span class="check"></span> <?= $status['2'] ?>
-													</label>
-													<label>
-														<input type="radio" name="status" value="3" <?= $key['status'] == '3' ? 'checked="true"' : '' ?>><span class="circle"></span><span class="check"></span> <?= $status['3'] ?>
-													</label>
-													<label>
-														<input type="radio" name="status" value="4" <?= $key['status'] == '4' ? 'checked="true"' : '' ?>><span class="circle"></span><span class="check"></span> <?= $status['4'] ?>
 													</label>
 												</div>
 											</div>
@@ -135,7 +131,7 @@
 
 						<!-- notice modal -->
 						<?php foreach ($data as $key) : ?>
-							<div class="modal fade" id="lihatFile<?= $key['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal fade" id="surat_dinsos<?= $key['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 								<div class="modal-dialog modal-notice">
 									<div class="modal-content">
 										<div class="modal-header">
@@ -146,9 +142,8 @@
 											<div class="instruction">
 												<div class="row">
 													<div class="col-md-12">
-														<embed type="application/pdf" width="100%" height="450px;" src="<?= base_url('uploads/berkas') ?>/<?= $key['file'] ?>"></embed>
+														<embed type="application/pdf" width="100%" height="450px;" src="<?= base_url('uploads/berkas') ?>/<?= $key['surat_dinsos'] ?>"></embed>
 													</div>
-
 												</div>
 											</div>
 

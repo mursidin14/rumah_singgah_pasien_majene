@@ -24,17 +24,19 @@ class Suratonline extends CI_Controller
             'sub_title' => ''
         ];
 
-        $data['options'] = [
-            'Pilih Kamar',
-            'RSP-K1' => 'Kamar 1',
-            'RSP-K2' => 'Kamar 2',
-            'RSP-K3' => 'Kamar 3',
-            'RSP-K4' => 'Kamar 4',
-            'RSP-K5' => 'Kamar 5',
-            'RSP-K6' => 'Kamar 6',
-        ];
-
         $data['sm'] = $this->db->get('iventaris')->result_array();
+
+        $kamar = array();
+        $status = array();
+
+        foreach ($data['sm'] as $row) {
+            $kamar[$row['kamar']] = $row['kamar'];
+            $status[$row['kamar']] = $row['status'];
+        }
+
+        $data['kamar'] = $kamar;
+        $data['status'] = $status;
+
         // var_dump($data);
         $this->load->view('frontend/header2', $judul);
         $this->load->view('frontend/s_online', $data);
@@ -44,10 +46,8 @@ class Suratonline extends CI_Controller
     public function ajukan()
     {
         $status = [
-            1 => 1,  // Mengajukan
-            2 => 2,  // Ditolak
-            3 => 3,  // Diproses
-            4 => 4,  // Diterima
+            1 => 1,  // Diterima
+            2 => 2,  // Persyaratan Tidak Memenuhi
         ];
 
         $nama = $this->input->post('nama', TRUE);
@@ -114,7 +114,7 @@ class Suratonline extends CI_Controller
         }
 
         // surat rujukan
-        $surat_rujukan = ''; // Default value jika file tidak diupload
+        $surat_rujukan = '';
 
         if ($_FILES['surat_rujukan']['name'] != null) {
             $namafile_rujukan = substr($_FILES['surat_rujukan']['name'], -7);
@@ -132,6 +132,25 @@ class Suratonline extends CI_Controller
             }
         }
 
+        $surat_dinsos = '';
+
+        if ($_FILES['surat_dinsos']['name'] != null) {
+            $namafile_dinsos = substr($_FILES['surat_dinsos']['name'], -7);
+            $surat_dinsos = $jenis_surat . uniqid().$namafile_dinsos;
+            $config['upload_path'] = './uploads/berkas';
+            $config['allowed_types'] = '*';
+            $config['max_size'] = 5120; // 5MB
+            $config['file_name'] = $surat_dinsos;
+
+            $this->load->library('upload', $config);
+
+            if ($this->upload->do_upload("surat_dinsos")) {
+                $data = array('upload_data' => $this->upload->data());
+                $surat_dinsos = $data['upload_data']['file_name'];
+            }
+        }
+
+
 
         $data = [
             'id' => $id,
@@ -141,6 +160,7 @@ class Suratonline extends CI_Controller
             'jenis_surat' => $jenis_surat,
             'file' => $file,
             'surat_rujukan' => $surat_rujukan,
+            'surat_dinsos' => $surat_dinsos,
             'tanggal' => date('Y-m-d'),
             'tujuan_rs' => $tujuan_rs, 
             'rencana_masuk' => $rencana_masuk,
