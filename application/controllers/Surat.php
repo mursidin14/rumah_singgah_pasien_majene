@@ -299,12 +299,6 @@ class Surat extends CI_Controller
             2 => 'Ditolak',
         ];
 
-        $data['options'] = [
-            'Pilih Kode Kamar',
-            'RSP-K1' => 'Kamar 1',
-            'RSP-K2' => 'Kamar 2',
-            'RSP-K3' => 'Kamar 3',
-        ];
         
         $this->db->select('*');
         $this->db->from('pengajuan_surat');

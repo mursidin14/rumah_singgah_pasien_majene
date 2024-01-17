@@ -8,7 +8,8 @@
  	<div class="container">
  		<div class="masthead-subheading">Selamat Datang!</div>
  		<div class="masthead-heading text-uppercase">RSP Majene</div>
- 		<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="<?= base_url('home/#profil')?>">Lihat Profil</a>
+ 		<a class="btn btn-primary btn-xl text-uppercase portfolio-link" data-toggle="modal" href="#slpm">	Lihat Alur Pendaftaran RSP
+		</a>
  	</div>
  </header>
 
@@ -31,7 +32,7 @@
  			<h2 class="section-heading text-uppercase">Struktur Organisasi & Alur Pelayanan</h2>
  			<h3 class="section-subheading text-muted">Kabupaten Majene</h3>
  		</div>
- 		<div class="row">
+ 		<div class="row justify-content">
  			<div class="col-lg-6 col-sm-12 mb-4">
  				<div class="portfolio-item">
  					<a class="portfolio-link" data-toggle="modal" href="#skelurahan">
@@ -40,18 +41,6 @@
  					</a>
  					<div class="portfolio-caption text-center">
  						<div class="portfolio-caption-heading">Sruktur Kabupaten Majene</div>
- 						<div class="portfolio-caption-subheading text-muted">Klik + lihat detail</div>
- 					</div>
- 				</div>
- 			</div>
-			 <div class="col-lg-6 col-sm-12 mb-4">
- 				<div class="portfolio-item">
- 					<a class="portfolio-link" data-toggle="modal" href="#slpm">
- 						<img class="img-fluid" src="<?= base_url('/assets/galery/'); echo $profil[0]['s_lpm'] ?>"
- 							alt="alur pelayanan rsp" />
- 					</a>
- 					<div class="portfolio-caption text-center">
- 						<div class="portfolio-caption-heading">Alur Pelayanan Rumah Singgah Pasien Majene</div>
  						<div class="portfolio-caption-subheading text-muted">Klik + lihat detail</div>
  					</div>
  				</div>

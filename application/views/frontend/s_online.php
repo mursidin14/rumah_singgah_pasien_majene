@@ -31,9 +31,23 @@
                     <label for="rencana_masuk">Rencana Masuk *</label>
                     <?= form_input(['type' => 'date', 'name' => 'rencana_masuk', 'id' => 'rencana_masuk', 'class' => 'form-control', "required" => "required", 'placeholder' => 'Rencana masuk']); ?>
                 </div>
-                <div class="col-lg-6 mt-2">
+                <!-- <div class="col-lg-6 mt-2">
                     <label for="jenis">Pilih Kamar *</label>
                     <?= form_dropdown('jenis_surat', $kamar, '', ['id' => 'jenis', 'class' => 'form-control']); ?> 
+                </div> -->
+                <div class="col-lg-6 mt-2">
+                    <label for="jenis">Pilih Kamar*</label>
+                    <select name="jenis_surat" id="jenis" class="form-control">
+                        <?php foreach ($sm as $row): ?>
+                            <?php
+                                $isStatusFilled = $row['status'] == '2';
+                                $statusLabel = ($isStatusFilled) ? ' (Kamar Terisi)' : ' (Kamar Kosong)';
+                            ?>
+                            <option value="<?= $row['kamar']; ?>" <?= $isStatusFilled ? 'disabled' : ''; ?>>
+                                <?= $row['kamar'] . $statusLabel; ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
                 </div>
                 <div class="col-lg-12 mt-2">
                     <label for="file">File KTP <sup class="text-danger">*Max 5MB</sup></label>
@@ -85,14 +99,12 @@
         select.addEventListener('change', function () {
             var selectedOption = select.options[select.selectedIndex];
             var kamarStatus = <?= json_encode($status); ?>;
-            var isStatusFilled = kamarStatus[selectedOption.value] === '2'; // 2 represents 'kamar terisi'
+            var isStatusFilled = kamarStatus[selectedOption.value] === '2';
 
             selectedOption.disabled = isStatusFilled;
 
             if (isStatusFilled) {
                 alert('Pengajuan ditolak karena kamar terisi.');
-                // atau Anda bisa menggunakan cara lain untuk menampilkan pesan kepada pengguna
-                // misalnya, menambahkan elemen HTML yang menampilkan pesan di dalam halaman
             }
         });
     });

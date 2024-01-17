@@ -29,7 +29,7 @@
 										<th class="disabled-sorting text-right">Actions</th>
 										<th>No Hp</th>
 										<th>Tanggal</th>
-										<th>Kode Kamar</th>
+										<th>Kamar</th>
 										<th>Rencana Masuk</th>
 										<th>Tujuan RS</th>
 									</tr>
@@ -59,7 +59,7 @@
 											</td>
 											<td><?= $key['no_hp']; ?></td>
 											<td><?= $key['tanggal']; ?></td>
-											<td><?= $options[$key['jenis_surat']]; ?></td>
+											<td><?= $key['jenis_surat']; ?></td>
 											<td><?= $key['rencana_masuk']; ?></td>
 											<td><?= $key['tujuan_rs']; ?></td>
 
