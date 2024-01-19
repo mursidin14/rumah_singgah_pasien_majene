@@ -6,7 +6,11 @@
 	header.masthead {
 		margin-top: 80px;
 		/* background-image: url("<?= base_url()?>assets/img/avatar_rsp.png"); */
-		background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(255, 255, 255, .2)), url("<?= base_url()?>assets/img/avatar_rsp.png");
+		background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(255, 255, 255, .2)), url("<?= base_url()?>assets/img/avatar_rsp_.png");
+		background-repeat: no-repeat;
+		background-attachment: scroll;
+		background-position: center center;
+		background-size: cover;
 	}
  </style>
  <!-- Masthead-->
