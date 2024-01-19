@@ -2,6 +2,12 @@
 	html {
 		scroll-behavior: smooth;
 	}
+
+	header.masthead {
+		margin-top: 80px;
+		/* background-image: url("<?= base_url()?>assets/img/avatar_rsp.png"); */
+		background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(255, 255, 255, .2)), url("<?= base_url()?>assets/img/avatar_rsp.png");
+	}
  </style>
  <!-- Masthead-->
  <header class="masthead">
@@ -32,7 +38,7 @@
  			<h2 class="section-heading text-uppercase">Struktur Organisasi & Alur Pelayanan</h2>
  			<h3 class="section-subheading text-muted">Kabupaten Majene</h3>
  		</div>
- 		<div class="row justify-content">
+ 		<div class="row justify-content-center">
  			<div class="col-lg-6 col-sm-12 mb-4">
  				<div class="portfolio-item">
  					<a class="portfolio-link" data-toggle="modal" href="#skelurahan">

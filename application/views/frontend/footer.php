@@ -64,12 +64,6 @@
                                     <h2 class="text-uppercase">Alur Pelayanan RSP Majene</h2>
                                     <p class="item-intro text-muted"></p>
                                     <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/galery/'); echo $profil[0]['s_lpm']?>" alt="struktur-lpm" />
-                                    <!-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Threads</li>
-                                        <li>Category: Illustration</li>
-                                    </ul> -->
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
                                         Tutup
@@ -95,12 +89,6 @@
                                     <h2 class="text-uppercase">Struktur LINMAS</h2>
                                     <p class="item-intro text-muted">|</p>
                                     <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/galery/'); echo $profil[0]['s_linmas']?>" alt="struktur-linmas" />
-                                    <!-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Threads</li>
-                                        <li>Category: Illustration</li>
-                                    </ul> -->
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
                                         Tutup
@@ -126,12 +114,6 @@
                                     <h2 class="text-uppercase">Struktur Pemuda Kelurahan</h2>
                                     <p class="item-intro text-muted">|</p>
                                     <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/galery/'); echo $profil[0]['s_pemuda']?>" alt="struktur-pemuda" />
-                                    <!-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Threads</li>
-                                        <li>Category: Illustration</li>
-                                    </ul> -->
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
                                         Tutup
@@ -157,12 +139,6 @@
                                     <h2 class="text-uppercase">Struktur RT & RW</h2>
                                     <p class="item-intro text-muted">|</p>
                                     <img class="img-fluid d-block mx-auto" src="<?= base_url('/assets/galery/'); echo $profil[0]['k_rtrw']?>" alt="struktur-rtrw" />
-                                    <!-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Threads</li>
-                                        <li>Category: Illustration</li>
-                                    </ul> -->
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
                                         Tutup
@@ -186,5 +162,61 @@
         <!-- Core theme JS-->
         <script src="<?= base_url()?>assets/js/scripts.js"></script>
         <script src="<?= base_url();?>assets/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+        <script>
+                (function ($) {
+    "use strict"; // Start of use strict 
+
+    // Smooth scrolling using jQuery easing
+    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+        if (
+            location.pathname.replace(/^\//, "") ==
+                this.pathname.replace(/^\//, "") &&
+            location.hostname == this.hostname
+        ) {
+            var target = $(this.hash);
+            target = target.length
+                ? target
+                : $("[name=" + this.hash.slice(1) + "]");
+            if (target.length) {
+                $("html, body").animate(
+                    {
+                        scrollTop: target.offset().top - 72,
+                    },
+                    1000,
+                    "easeInOutExpo"
+                );
+                return false;
+            }
+        }
+    });
+
+    // Closes responsive menu when a scroll trigger link is clicked
+    $(".js-scroll-trigger").click(function () {
+        $(".navbar-collapse").collapse("hide");
+    });
+
+    // Activate scrollspy to add active class to navbar items on scroll
+    $("body").scrollspy({
+        target: "#mainNav",
+        offset: 74,
+    });
+
+    // Collapse Navbar
+    var navbarCollapse = function () {
+        $("#mainNav").addClass("navbar-shrink");
+        // if ($("#mainNav").offset().top > 100) {
+        //     $("#mainNav").addClass("navbar-shrink");
+        // } else {
+        //     // $("#mainNav").removeClass("navbar-shrink");
+        // }
+    };
+    // Collapse now if page is not at top
+    navbarCollapse();
+    // Collapse the navbar when page is scrolled
+    $(window).scroll(navbarCollapse);
+})(jQuery); // End of use strict
+
+        </script>
     </body>
 </html>
