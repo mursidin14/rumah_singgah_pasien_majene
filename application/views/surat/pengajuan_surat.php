@@ -20,8 +20,8 @@
 								<thead>
 									<tr>
 										<th>No</th>
-										<th>ID Pengajuan</th>
-										<th>Nama Pengaju (NIK)</th>
+										<th>NIK</th>
+										<th>Nama</th>
 										<th>File</th>
 										<th>Surat Rujukan</th>
 										<th>Surat Dinsos</th>
@@ -42,7 +42,7 @@
 										<tr>
 											<td><?= $no; ?></td>
 											<td><?= $key['id']; ?></td>
-											<td><?= $key['nama'] . ' (' . $key['nik'] . ')'; ?></td>
+											<td><?= $key['nama']; ?></td>
 											<td>
 												<button class="btn btn-simple btn-info" data-toggle="modal" data-target="#lihatfile<?= $key['id']; ?>"><i class="material-icons">remove_red_eye</i></button>
 											</td>
@@ -198,10 +198,8 @@
 													<div class="col-md-12">
 														<embed type="application/pdf" width="100%" height="450px;" src="<?= base_url('uploads/berkas') ?>/<?= $key['file'] ?>"></embed>
 													</div>
-
 												</div>
 											</div>
-
 										</div>
 										<div class="modal-footer text-center">
 											<button type="button" class="btn btn-info btn-round" data-dismiss="modal">Tutup</button>

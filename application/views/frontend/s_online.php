@@ -50,16 +50,16 @@
                     </select>
                 </div>
                 <div class="col-lg-12 mt-2">
-                    <label for="file">File KTP <sup class="text-danger">*Max 5MB</sup></label>
-                    <?= form_upload(['name' => 'file', 'id' => 'file', 'class' => 'form-control']) ?>
+                    <label for="file">File KTP <sup class="text-danger">*Type File PDF, Max 5MB</sup></label>
+                    <?= form_upload(['name' => 'file', 'id' => 'file', 'class' => 'form-control', 'accept' => '.pdf', 'required']) ?>
                 </div>
                 <div class="col-lg-12 mt-2">
-                    <label for="file">Surat Rujukan <sup class="text-danger">*Max 5MB</sup></label>
-                    <?= form_upload(['name' => 'surat_rujukan', 'id' => 'file', 'class' => 'form-control']) ?>
+                    <label for="file">Surat Rujukan <sup class="text-danger">*Type File PDF, Max 5MB</sup></label>
+                    <?= form_upload(['name' => 'surat_rujukan', 'id' => 'file', 'class' => 'form-control', 'accept' => '.pdf', 'required']) ?>
                 </div>
                 <div class="col-lg-12 mt-2">
-                    <label for="file">Surat Rekomendasi Dinsos<sup class="text-danger">*Max 5MB</sup></label>
-                    <?= form_upload(['name' => 'surat_dinsos', 'id' => 'file', 'class' => 'form-control']) ?>
+                    <label for="file">Surat Rekomendasi Dinsos<sup class="text-danger">*Type File PDF, Max 5MB</sup></label>
+                    <?= form_upload(['name' => 'surat_dinsos', 'id' => 'file', 'class' => 'form-control', 'accept' => '.pdf', 'required']) ?>
                 </div>
             </div>
             <hr>

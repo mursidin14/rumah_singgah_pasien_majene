@@ -90,13 +90,14 @@ class Suratonline extends CI_Controller
         // var_dump($id);
         // die;
 
+
         if ($_FILES['file']['size'] >= 5242880) {
             $this->session->set_flashdata('success', '<div class="alert alert-warning alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h5><i class="icon fas fa-ban"></i> MAAF!</h5> File Lebih 2MB!</div>');
             redirect(base_url("suratonline"));
         }
 
         if ($_FILES['file']['name'] == null) {
-            $file = '-';
+            $file = '';
         } else {
             $namafile = substr($_FILES['file']['name'],-7);
             $file = $jenis_surat.uniqid().$namafile;
@@ -109,7 +110,7 @@ class Suratonline extends CI_Controller
 
             if ($this->upload->do_upload("file")) {
                 $data = array('upload_data' => $this->upload->data());
-                $berkas = $data['upload_data']['file_name'];
+                $file = $data['upload_data']['file_name'];
             }
         }
 
@@ -149,7 +150,6 @@ class Suratonline extends CI_Controller
                 $surat_dinsos = $data['upload_data']['file_name'];
             }
         }
-
 
 
         $data = [
