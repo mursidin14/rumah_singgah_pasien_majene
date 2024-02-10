@@ -18,8 +18,11 @@
                         <?= form_error('nama', '<div class="text-danger">', '</div>'); ?>
                         
                         <div class="form-group">
-                            <label class="label-control">JK</label>
-                            <input class="form-control" name="jk" id="jk" type="text" value="<?= $kunjungan['jk']; ?>" />
+                            <label class="label-control">Jenis Kelamin</label>
+                            <select class="form-control" name="jk" id="jk">
+                                <option value="laki-laki" <?= ($kunjungan['jk'] == 'laki-laki') ? 'selected' : ''; ?>>Laki-laki</option>
+                                <option value="perempuan" <?= ($kunjungan['jk'] == 'perempuan') ? 'selected' : ''; ?>>Perempuan</option>
+                            </select>
                         </div>
                         <?= form_error('jk', '<div class="text-danger">', '</div>'); ?>
 

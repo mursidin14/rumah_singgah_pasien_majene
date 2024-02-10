@@ -34,6 +34,7 @@
 										<th>No</th>
 										<th>Fasilitas</th>
 										<th>Jumlah Fasilitas</th>
+										<th>Keterangan</th>
 										<th class="disabled-sorting text-right">Actions</th>
 									</tr>
 								</thead>
@@ -42,6 +43,7 @@
 										<th>No</th>
 										<th>Fasilitas</th>
 										<th>Jumlah Fasilitas</th>
+										<th>Keterangan</th>
 										<th class="text-right">Actions</th>
 									</tr>
 								</tfoot>
@@ -53,6 +55,7 @@
 										<td><?= $no; ?></td>
 										<td><?= $key['fasilitas']; ?></td>
 										<td><?= $key['jml_fasilitas']; ?></td>
+										<td><?= $key['note']; ?></td>
 										<td class="text-right">
 											<a href="<?= base_url() ?>afasilitas/edit/<?= $key['id']; ?>"
 												class="btn btn-simple btn-primary btn-icon"><i

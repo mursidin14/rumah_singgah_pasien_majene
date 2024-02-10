@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-lg-6 mt-2">
                     <label for="rencana_masuk">Rencana Masuk *</label>
-                    <?= form_input(['type' => 'date', 'name' => 'rencana_masuk', 'id' => 'rencana_masuk', 'class' => 'form-control', "required" => "required", 'placeholder' => 'Rencana masuk']); ?>
+                    <?= form_input(['type' => 'date', 'name' => 'rencana_masuk', 'id' => 'rencana_masuk', 'class' => 'form-control', 'min' => "", 'oninput' => "setMinDate()", "required" => "required", 'placeholder' => 'Rencana masuk']); ?>
                 </div>
                 <!-- <div class="col-lg-6 mt-2">
                     <label for="jenis">Pilih Kamar *</label>
@@ -108,4 +108,19 @@
             }
         });
     });
+
+      // Fungsi untuk mengatur nilai min pada input tanggal
+        function setMinDate() {
+            // Dapatkan tanggal saat ini
+            var currentDate = new Date();
+
+            // Format tanggal untuk digunakan dalam atribut min
+            var formattedDate = currentDate.toISOString().split('T')[0];
+
+            // Set nilai min pada input tanggal
+            document.getElementById("rencana_masuk").min = formattedDate;
+        }
+        
+        // Panggil fungsi saat halaman dimuat
+        setMinDate();
 </script>

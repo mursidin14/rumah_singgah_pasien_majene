@@ -21,6 +21,11 @@
                             <input class="form-control" name="jml_fasilitas" id="jml_fasilitas" value="<?= $data['jml_fasilitas']; ?>" type="text" required="true" />
                         </div>
 
+                        <div class="form-group">
+                            <label class="label-control">Keterangan</label>
+                            <input class="form-control" name="note" id="note" value="<?= $data['note']; ?>" type="text" required="true" />
+                        </div>
+
                         <div class="category form-category">
                             <div class="form-footer text-right">
                                 <button type="submit" class="btn btn-success btn-fill">simpan</button>

@@ -50,7 +50,7 @@
                                     <tr>
                                         <td>No</td>
                                         <td>Nama Pasien</td>
-                                        <td>JK</td>
+                                        <td>Jenis Kelamin</td>
                                         <td>Alamat</td>
                                         <td>Tanggal Masuk</td>
                                         <td>Nomor BPJS</td>

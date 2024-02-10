@@ -50,7 +50,7 @@ class Kunjungan extends CI_Controller
         $this->form_validation->set_rules('tgl_masuk', 'Tanggal Masuk', 'required|trim');
         $this->form_validation->set_rules('no_bpjs', 'Nomor BPJS', 'required');
         $this->form_validation->set_rules('poli_tujuan', 'Poli Tujuan', 'required|trim');
-        $this->form_validation->set_rules('tgl_keluar', 'Tanggal Keluar', 'required|trim');
+        $this->form_validation->set_rules('tgl_keluar', 'Tanggal Keluar');
         $this->form_validation->set_rules('keterangan', 'Keterangan', 'required|trim');
 
 
@@ -99,7 +99,7 @@ class Kunjungan extends CI_Controller
         $this->form_validation->set_rules('tgl_masuk', 'Tanggal Masuk', 'required|trim');
         $this->form_validation->set_rules('no_bpjs', 'Nomor BPJS', 'required');
         $this->form_validation->set_rules('poli_tujuan', 'Poli Tujuan', 'required|trim');
-        $this->form_validation->set_rules('tgl_keluar', 'Tanggal Keluar', 'required|trim');
+        $this->form_validation->set_rules('tgl_keluar', 'Tanggal Keluar');
         $this->form_validation->set_rules('keterangan', 'Keterangan', 'required|trim');
 
 
@@ -142,20 +142,5 @@ class Kunjungan extends CI_Controller
             redirect(base_url("kunjungan"));
         }
     }
-
-    // function get_autocomplete(){
-    //     if (isset($_GET['term'])) {
-    //         $result = $this->M_Penduduk->search_nik($_GET['term']);
-    //         if (count($result) > 0) {
-    //             foreach ($result as $row)
-    //                 $arr_result[] = array(
-    //                     'label'  => $row->nik,
-    //                     'nama' => $row->nama,
-    //                     'no_hp' => $row->no_hp,
-    //              );
-    //                 echo json_encode($arr_result);
-    //         }
-    //     }
-    // }
 
 }

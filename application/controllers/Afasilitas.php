@@ -33,6 +33,7 @@ class Afasilitas extends CI_Controller
     {
         $this->form_validation->set_rules('fasilitas', 'Fasilitas', 'required');
         $this->form_validation->set_rules('jml_fasilitas', 'Jumlah Fasilitas', 'required');
+        $this->form_validation->set_rules('note', 'Keterangan', 'required');
 
 
         if ($this->form_validation->run() == FALSE) {
@@ -48,6 +49,7 @@ class Afasilitas extends CI_Controller
             $save = [
                 'fasilitas' => $this->input->post("fasilitas", TRUE),
                 'jml_fasilitas' => $this->input->post("jml_fasilitas", TRUE),
+                'note' => $this->input->post("note", TRUE),
             ];
 
             $this->db->insert('fasilitas', $save);
@@ -76,6 +78,7 @@ class Afasilitas extends CI_Controller
 
         $this->form_validation->set_rules('fasilitas', 'fasilitas', 'required');
         $this->form_validation->set_rules('jml_fasilitas', 'jml_fasilitas', 'required');
+        $this->form_validation->set_rules('note', 'note', 'required');
 
         if ($this->form_validation->run() == FALSE) {
             $judul = [
@@ -91,10 +94,12 @@ class Afasilitas extends CI_Controller
         } else {
             $fasilitas =  $this->input->post("fasilitas", TRUE);
             $jml_fasilitas =  $this->input->post("jml_fasilitas", TRUE);
+            $note =  $this->input->post("note", TRUE);
 
             $update = [
                'fasilitas' => $fasilitas,
                'jml_fasilitas' => $jml_fasilitas,
+               'note' => $note,
             ];
 
             $this->db->where('id', $id);

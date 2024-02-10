@@ -18,8 +18,11 @@
                         <?= form_error('nama', '<div class="text-danger">', '</div>'); ?>
                         
                         <div class="form-group">
-                            <label class="label-control">JK</label>
-                            <input class="form-control" name="jk" id="jk" type="text" value="<?= set_value('jk'); ?>" />
+                            <label class="label-control">Jenis Kelamin</label>
+                            <select class="form-control" name="jk" id="jk">
+                                <option value="laki-laki" <?= set_select('jk', 'laki-laki'); ?>>Laki-laki</option>
+                                <option value="perempuan" <?= set_select('jk', 'perempuan'); ?>>Perempuan</option>
+                            </select>
                         </div>
                         <?= form_error('jk', '<div class="text-danger">', '</div>'); ?>
 
