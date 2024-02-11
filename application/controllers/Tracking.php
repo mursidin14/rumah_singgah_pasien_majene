@@ -45,7 +45,8 @@ class Tracking extends CI_Controller
         // die;
 
         if ($row === null) {
-            $this->session->set_flashdata('message', '<div class="alert alert-warning alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h5><i class="icon fas fa-bank"></i> Maaf!</h5> ID yang anda masukkan Salah! <b>ID: </b><b>'.$id.'</b> <i>tidak ditemukan</i></div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-warning alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h5><i class="icon fas fa-bank"></i> Maaf!</h5> NIK anda belum mengajuka Pendaftaran
+            </div>');
             redirect(base_url("tracking"));
         }else {
             redirect(base_url("tracking/tracked/").$id);

@@ -64,7 +64,6 @@
 
                         <div class="category form-category">
                             <div class="form-footer text-right">
-
                                 <button type="submit" class="btn btn-success btn-fill">simpan</button>
                             </div>
                         </div>
