@@ -33,7 +33,7 @@ class Afasilitas extends CI_Controller
     {
         $this->form_validation->set_rules('fasilitas', 'Fasilitas', 'required');
         $this->form_validation->set_rules('jml_fasilitas', 'Jumlah Fasilitas', 'required');
-        $this->form_validation->set_rules('note', 'Keterangan', 'required|callback_validate_max_words');
+        $this->form_validation->set_rules('note', 'Keterangan', 'required');
     
         if ($this->form_validation->run() == FALSE) {
             $judul = [
@@ -58,18 +58,18 @@ class Afasilitas extends CI_Controller
     }
     
     // Fungsi callback untuk memeriksa jumlah kata
-    public function validate_max_words($str)
-    {
-        $max_words = 30;
-        $word_count = str_word_count($str);
+    // public function validate_max_words($str)
+    // {
+    //     $max_words = 30;
+    //     $word_count = str_word_count($str);
     
-        if ($word_count > $max_words) {
-            $this->form_validation->set_message('validate_max_words', 'Keterangan tidak boleh melebihi ' . $max_words . ' kata.');
-            return false;
-        }
+    //     if ($word_count > $max_words) {
+    //         $this->form_validation->set_message('validate_max_words', 'Keterangan tidak boleh melebihi ' . $max_words . ' kata.');
+    //         return false;
+    //     }
     
-        return true;
-    }
+    //     return true;
+    // }
     
 
 

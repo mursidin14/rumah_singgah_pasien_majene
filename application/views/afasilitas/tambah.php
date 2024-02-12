@@ -24,8 +24,8 @@
                         <?= form_error('jml_fasilitas', '<div class="text-danger">', '</div>'); ?>
 
                         <div class="form-group">
-                            <label class="label-control">Keterangan (max 30 kata)</label>
-                            <input class="form-control" name="note" id="note" type="text" maxlength="255" placeholder="Max 30 kata" value="<?= set_value('note'); ?>" />
+                            <label class="label-control">Keterangan (max 30)</label>
+                            <input class="form-control" name="note" id="note" type="text" maxlength="30" placeholder="Max 30 huruf" value="<?= set_value('note'); ?>" />
                         </div>
                         <?= form_error('note', '<div class="text-danger">', '</div>'); ?>
 

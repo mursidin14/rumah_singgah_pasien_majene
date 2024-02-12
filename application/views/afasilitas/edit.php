@@ -22,8 +22,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="label-control">Keterangan</label>
-                            <input class="form-control" name="note" id="note" value="<?= $data['note']; ?>" type="text" required="true" />
+                            <label class="label-control">Keterangan (max 30)</label>
+                            <input class="form-control" name="note" id="note" maxlength="30" value="<?= $data['note']; ?>" type="text" required="true" />
                         </div>
 
                         <div class="category form-category">
