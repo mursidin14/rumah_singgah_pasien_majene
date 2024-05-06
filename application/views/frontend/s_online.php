@@ -3,6 +3,8 @@
     <div class="container">
         <?php if ($this->session->flashdata('success') == TRUE) : ?>
             <?= $this->session->flashdata('success'); ?>
+        <?php elseif ($this->session->flashdata('error') == TRUE) : ?>
+            <?= $this->session->flashdata('error'); ?>
         <?php endif; ?>
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Pengajuan Rumah Singgha Pasien</h2>

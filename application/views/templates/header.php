@@ -155,12 +155,6 @@
                                 <?php if ($sub_title == 'Profil Kelurahan') : ?>
                                     <?= 'active'; ?>
                                 <?php endif; ?>
-                                ">
-									<a href="<?= base_url() ?>galery/profil_kelurahan">
-										<span class="sidebar-mini">RF</span>
-										<span class="sidebar-normal">Profil Kelurahan</span>
-									</a>
-								</li> -->
 								<li class="
                                 <?php if ($sub_title == 'Struktur Organisasi') : ?>
                                     <?= 'active'; ?>
@@ -213,16 +207,6 @@
 								</li> -->
 							</ul>
 						</div>
-					</li>
-
-					<li class="<?php if ($title == 'Penduduk') : ?>
-                        <?= 'active'; ?>
-						<?php endif; ?>
-						">
-						<a href="<?= base_url('penduduk') ?>">
-							<i class="material-icons">assignment_ind</i>
-							<p>Penduduk</p>
-						</a>
 					</li>
 
 					<li class="<?php if ($title == 'Kunjungan') : ?>
